@@ -6,6 +6,7 @@ axios.defaults.withCredentials = true;
 
 export default function MyPage() {
   const [_username, setUsername] = useState("");
+  const [_password, setPassword] = useState("");
   const [_msg, setMsg] = useState("");
   const [_loading, setLoading] = useState(true);
 
@@ -22,14 +23,15 @@ export default function MyPage() {
       .then((_JSON) => {
         //cek _JSON status
         setLoading(false);
-        document.getElementById("txt_username").focus(); //untuk mengaktifkan kursor di inputan username
+        setUsername("username");
+        document.getElementById("txt_password").focus(); //untuk mengaktifkan kursor di inputan username
       })
       .catch((err) => console.log("Err: " + err));
   };
 
   const formSubmit = async (e) => {
     e.preventDefault(); //perintah untuk kirim hanya 1x
-    setMsg(_username);
+    setMsg(_username + " " + _password);
 
     await axios
       .post(_Lang._DOMAIN + "/pget")
@@ -39,7 +41,7 @@ export default function MyPage() {
           //proses login
           setMsg("");
 
-          Router.push("/login");
+          Router.push("/user/home");
         }, _Lang._TIMER);
       })
       .catch((err) => console.log("Err: " + err));
@@ -57,13 +59,21 @@ export default function MyPage() {
             <form onSubmit={(e) => formSubmit(e)}>
               <div className="input-group">
                 <input
-                  required //harus diisi artinya
+                  disabled
                   type="text"
-                  id="txt_username"
                   className="form-control"
-                  placeholder={_Lang._USERNAME}
-                  value={_username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  defaultValue={_username}
+                />
+              </div>
+              <div className="input-group">
+                <input
+                  required //harus diisi artinya
+                  type="password"
+                  id="txt_password"
+                  className="form-control"
+                  placeholder={_Lang._PASSWORD}
+                  value={_password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
