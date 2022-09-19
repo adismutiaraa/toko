@@ -44,11 +44,11 @@ export default function Nav() {
             <div className="dropdown-menu">
               <div className="text-bold pl-2">SetUp</div>
               <div className="dropdown-divider"></div>
-              <Link href="/user/home">
-                <a className="dropdown-item small">Menu 1</a>
+              <Link href="/setup/position">
+                <a className="dropdown-item small">Position</a>
               </Link>
-              <Link href="/user/home">
-                <a className="dropdown-item small">Menu 2</a>
+              <Link href="/setup/staff">
+                <a className="dropdown-item small">Staff</a>
               </Link>
             </div>
           </li>

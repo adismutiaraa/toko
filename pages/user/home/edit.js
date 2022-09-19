@@ -44,15 +44,26 @@ export default function MyPage() {
               </div>
               <form className="small mt-3">
                 <div className="form-group">
-                  <label>Email address</label>
+                  <label>Kode</label>
                   <input
-                    type="email"
+                    type="text"
                     className="form-control form-control-sm"
-                    id="exampleInputEmail1"
-                    placeholder="Enter email"
+                    id="txt_kode"
+                    placeholder="Kode"
                   />
                 </div>
-                <button type="submit" className="btn btn-danger btn-sm">
+                <div className="form-group">
+                  <label>Nama</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_nama"
+                    placeholder="Nama"
+                  />
+                </div>
+                <button onClick={(e) => {
+                  Router.push("/user/home");
+                }} type="submit" className="btn btn-danger btn-sm">
                   Update
                 </button>
               </form>
