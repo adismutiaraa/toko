@@ -59,11 +59,14 @@ export default function Nav() {
             <div className="dropdown-menu">
               <div className="text-bold pl-2">Purchase</div>
               <div className="dropdown-divider"></div>
-              <Link href="/user/home">
-                <a className="dropdown-item small">Menu 1</a>
+              <Link href="/purchase/supplier">
+                <a className="dropdown-item small">Supplier</a>
               </Link>
               <Link href="/user/home">
-                <a className="dropdown-item small">Menu 2</a>
+                <a className="dropdown-item small">Kategori Barang</a>
+              </Link>
+              <Link href="/user/home">
+                <a className="dropdown-item small">Barang</a>
               </Link>
             </div>
           </li>
