@@ -63,10 +63,10 @@ export default function Nav() {
                 <a className="dropdown-item small">Supplier</a>
               </Link>
               <Link href="/purchase/kategori_barang">
-                <a className="dropdown-item small">Kategori Barang</a>
+                <a className="dropdown-item small">Category Item</a>
               </Link>
-              <Link href="/user/home">
-                <a className="dropdown-item small">Barang</a>
+              <Link href="/purchase/items">
+                <a className="dropdown-item small">Items</a>
               </Link>
             </div>
           </li>
