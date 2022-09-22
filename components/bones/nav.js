@@ -77,8 +77,8 @@ export default function Nav() {
             <div className="dropdown-menu">
               <div className="text-bold pl-2">Warehouse</div>
               <div className="dropdown-divider"></div>
-              <Link href="/warehouse/items">
-                <a className="dropdown-item small">Items</a>
+              <Link href="/warehouse/item">
+                <a className="dropdown-item small">Item</a>
               </Link>
             </div>
           </li>
