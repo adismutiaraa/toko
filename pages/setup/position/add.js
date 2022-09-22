@@ -20,16 +20,16 @@ export default function MyPage (){
                 </div>
                 <form className="small mt-3">
                   <div className="form-group">
-                    <label>Posisi</label>
+                    <label>Name</label>
                     <input
                       type="text"
                       className="form-control form-control-sm"
-                      id="txt_posisi"
-                      placeholder="Posisi"
+                      id="txt_name"
+                      placeholder="Name"
                     />
                   </div>
                   <button type="submit" className="btn btn-danger btn-sm">
-                    Simpan
+                    Add
                   </button>
                 </form>
               </div>

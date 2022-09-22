@@ -20,24 +20,53 @@ export default function MyPage() {
               </div>
               <form className="small mt-3">
                 <div className="form-group">
-                  <label>Nama</label>
+                  <label>Code</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
-                    id="txt_nama"
-                    placeholder="Nama"
+                    id="txt_code"
+                    placeholder="Code"
                   />
                 </div>
                 <div className="form-group">
-                  <label>Posisi</label>
-                  <select className="form-control form-control-sm">
-                    <option>&nbsp;</option>
-                    <option>Admin</option>
-                    <option>Kasir</option>
-                  </select>
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_name"
+                    placeholder="Name"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Address</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_address"
+                    placeholder="Adress"
+                  />
+                </div>
+                <div className="form-group mt-3">
+                  <label>City</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_city"
+                    placeholder="City"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Tanggal Masuk</label>
+                  <label>Phone</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_phone"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Date</label>
                   <div
                     className="input-group date input-group-sm"
                     id="reservationdate"
@@ -58,37 +87,20 @@ export default function MyPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="form-group mt-3">
-                    <label>Kota</label>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      id="txt_kota"
-                      placeholder="Kota"
-                    />
-                  </div>
                   <div className="form-group">
-                    <label>Alamat</label>
-                    <input
-                      type="text"
+                    <label>Position</label>
+                    <select
                       className="form-control form-control-sm"
-                      id="txt_alamat"
-                      placeholder="Alamat"
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label>No.HP</label>
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      id="txt_noHp"
-                      placeholder="Nomor HP"
-                    />
+                      id="txt_position_id"
+                    >
+                      <option>&nbsp;</option>
+                      <option>Admin</option>
+                      <option>Kasir</option>
+                    </select>
                   </div>
                 </div>
                 <button type="submit" className="btn btn-danger btn-sm">
-                  Tambahkan
+                  Add
                 </button>
               </form>
             </div>

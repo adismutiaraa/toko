@@ -4,7 +4,7 @@ import Layout from "../../../components/layout/user";
 export default function MyPage() {
   return (
     <>
-      <Layout title="Category Item" module="Purchase" menu="Category Item">
+      <Layout title="Item Category" module="Purchase" menu="Item Category">
         <section className="content">
           <div className="card">
             <div className="card-body p-2">
@@ -14,7 +14,7 @@ export default function MyPage() {
                     <div className="input-group input-group-sm">
                       <button
                         onClick={(e) => {
-                          Router.push("/purchase/kategori_barang/add");
+                          Router.push("/purchase/itemcategory/add");
                         }}
                         className="btn btn-sm btn-dark"
                         type="button"
@@ -35,19 +35,33 @@ export default function MyPage() {
                 <table className="table table-bordered table-sm small mt-2">
                   <thead className="bg-gray">
                     <tr>
-                      <th width="100">Kode</th>
-                      <th>Categories</th>
+                      <th>Name</th>
                       <th width="75">&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>A1</td>
                       <td>Food</td>
                       <td>
                         <button
                           onClick={(e) => {
-                            Router.push("/purchase/kategori_barang/edit");
+                            Router.push("/purchase/itemcategory/edit");
+                          }}
+                          className="btn btn-xs btn-warning pl-2 pr-2"
+                        >
+                          <i className="fa fa-pen fa-sm"></i>
+                        </button>
+                        <button className="btn btn-xs btn-danger ml-1 pl-2 pr-2">
+                          <i className="fa fa-trash fa-sm"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Drink</td>
+                      <td>
+                        <button
+                          onClick={(e) => {
+                            Router.push("/purchase/itemcategory/edit");
                           }}
                           className="btn btn-xs btn-warning pl-2 pr-2"
                         >

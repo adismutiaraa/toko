@@ -3,7 +3,7 @@ import Router from "next/router";
 
 export default function MyPage() {
   return (
-    <Layout title="Items" module="Purchase" menu="Items">
+    <Layout title="Item" module="Purchase" menu="Item">
       <section className="content">
         <div className="card">
           <div className="card-body p-2">
@@ -13,7 +13,7 @@ export default function MyPage() {
                   <div className="input-group input-group-sm">
                     <button
                       onClick={(e) => {
-                        Router.push("/purchase/items/add");
+                        Router.push("/purchase/item/add");
                       }}
                       className="btn btn-sm btn-dark"
                       type="button"
@@ -34,23 +34,24 @@ export default function MyPage() {
               <table className="table table-bordered table-sm small mt-2">
                 <thead className="bg-gray">
                   <tr>
-                    <th width="100">Kode</th>
-                    <th>Items</th>
+                    <th width="100">Code</th>
+                    <th>Category</th>
+                    <th>Name</th>
                     <th>Price</th>
-                    <th>Status</th>
                     <th width="75">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>F001</td>
+                    <td>Food</td>
                     <td>Indomie Goreng Original</td>
                     <td>24500</td>
-                    <td>Show</td>
+                    
                     <td>
                       <button
                         onClick={(e) => {
-                          Router.push("/purchase/items/edit");
+                          Router.push("/purchase/item/edit");
                         }}
                         className="btn btn-xs btn-warning pl-2 pr-2"
                       >

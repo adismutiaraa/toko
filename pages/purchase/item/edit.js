@@ -4,14 +4,14 @@ import Router from "next/router";
 export default function () {
   return (
     <>
-      <Layout title="Items" module="Purchase" menu="Items / Edit">
+      <Layout title="Item" module="Purchase" menu="Item / Edit">
         <section className="content">
           <div className="card">
             <div className="card-body p-3">
               <div className="float-right">
                 <button
                   onClick={(e) => {
-                    Router.push("/purchase/items");
+                    Router.push("/purchase/item");
                   }}
                   className="btn btn-sm btn-warning"
                 >
@@ -20,21 +20,32 @@ export default function () {
               </div>
               <form className="small mt-3">
                 <div className="form-group">
-                  <label>Kode</label>
+                  <label>Code</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
-                    id="txt_kode"
-                    placeholder="Kode"
+                    id="txt_code"
+                    placeholder="Code"
                   />
                 </div>
                 <div className="form-group">
-                  <label>Items</label>
+                  <label>Category</label>
+                  <select
+                    className="form-control form-control-sm"
+                    id="txt_category_id"
+                  >
+                    <option>&nbsp;</option>
+                    <option>Food</option>
+                    <option>Drink</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Name</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
-                    id="txt_items"
-                    placeholder="Items"
+                    id="txt_name"
+                    placeholder="Name"
                   />
                 </div>
                 <div className="form-group">
@@ -46,15 +57,6 @@ export default function () {
                     placeholder="Price"
                   />
                 </div>
-                <div className="form-group">
-                  <label>Status</label>
-                  <select className="form-control form-control-sm">
-                    <option>&nbsp;</option>
-                    <option>Show</option>
-                    <option>Hide</option>
-                  </select>
-                </div>
-
                 <button type="submit" className="btn btn-danger btn-sm">
                   Save
                 </button>

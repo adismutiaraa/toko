@@ -1,14 +1,13 @@
 import Layout from "../../../components/layout/user";
 import Router from "next/router";
 
-
 export default function () {
   return (
     <>
       <Layout
-        title="Category Item"
+        title="Item Category"
         module="Purchase"
-        menu="Category Item / Add"
+        menu="Item Category / Edit"
       >
         <section className="content">
           <div className="card">
@@ -16,7 +15,7 @@ export default function () {
               <div className="float-right">
                 <button
                   onClick={(e) => {
-                    Router.push("/purchase/kategori_barang");
+                    Router.push("/purchase/itemcategory");
                   }}
                   className="btn btn-sm btn-warning"
                 >
@@ -25,26 +24,17 @@ export default function () {
               </div>
               <form className="small mt-3">
                 <div className="form-group">
-                  <label>Kode</label>
+                  <label>Name</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
-                    id="txt_kode"
-                    placeholder="Kode"
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Categories</label>
-                  <input
-                    type="text"
-                    className="form-control form-control-sm"
-                    id="txt_category"
-                    placeholder="Category"
+                    id="txt_name"
+                    placeholder="Name"
                   />
                 </div>
 
                 <button type="submit" className="btn btn-danger btn-sm">
-                  Add
+                  Save
                 </button>
               </form>
             </div>

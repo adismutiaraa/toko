@@ -35,7 +35,7 @@ export default function MyPage() {
                 <table className="table table-bordered table-sm small mt-2">
                   <thead className="bg-gray">
                     <tr>
-                      <th width="300">Posisi</th>
+                      <th width="300">Name</th>
                       <th width="30">&nbsp;</th>
                     </tr>
                   </thead>

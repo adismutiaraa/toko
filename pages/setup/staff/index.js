@@ -35,23 +35,25 @@ export default function MyPage() {
                 <table className="table table-bordered table-sm small mt-2">
                   <thead className="bg-gray">
                     <tr>
-                      <th width="50">Nama</th>
-                      <th width="30">Posisi</th>
-                      <th width="20">Tanggal Masuk</th>
-                      <th width="30">Kota</th>
-                      <th width="100">Alamat</th>
-                      <th width="35">No.HP</th>
+                      <th width="30">Code</th>
+                      <th width="50">Name</th>
+                      <th width="100">Address</th>
+                      <th width="30">City</th>
+                      <th width="35">Phone</th>
+                      <th width="20">Date</th>
+                      <th width="30">Position</th>
                       <th width="50">&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <td>001</td>
                       <td>Adis</td>
-                      <td>Kasir</td>
-                      <td>12-02-2022</td>
-                      <td>Cirebon</td>
                       <td>Parkit X</td>
+                      <td>Cirebon</td>
                       <td>0123456789</td>
+                      <td>12-02-2022</td>
+                      <td>Admin</td>
                       <td>
                         <button
                           onClick={(e) => {
@@ -67,12 +69,13 @@ export default function MyPage() {
                       </td>
                     </tr>
                     <tr>
+                      <td>003</td>
                       <td>Budi</td>
-                      <td>Admin</td>
-                      <td>12-02-2022</td>
-                      <td>Tasik</td>
-                      <td>Dr.Cipto</td>
-                      <td>0123456789</td>
+                      <td>P.Drajat</td>
+                      <td>Kuningan</td>
+                      <td>0123450976</td>
+                      <td>29-09-2022</td>
+                      <td>Cashier</td>
                       <td>
                         <button
                           onClick={(e) => {
