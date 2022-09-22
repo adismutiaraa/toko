@@ -35,7 +35,7 @@ export default function MyPage() {
                 <thead className="bg-gray">
                   <tr>
                     <th width="100">Kode</th>
-                    <th>Items Name</th>
+                    <th>Items</th>
                     <th>Price</th>
                     <th>Status</th>
                     <th width="75">&nbsp;</th>
