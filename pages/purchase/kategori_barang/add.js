@@ -34,7 +34,7 @@ export default function () {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Category</label>
+                  <label>Categories</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"

@@ -4,7 +4,7 @@ import Layout from "../../../components/layout/user";
 export default function MyPage() {
   return (
     <>
-      <Layout title="Kategori Barang" module="Purchase" menu="Kategori Barang">
+      <Layout title="Category Item" module="Purchase" menu="Category Item">
         <section className="content">
           <div className="card">
             <div className="card-body p-2">
@@ -36,7 +36,7 @@ export default function MyPage() {
                   <thead className="bg-gray">
                     <tr>
                       <th width="100">Kode</th>
-                      <th>Category</th>
+                      <th>Categories</th>
                       <th width="75">&nbsp;</th>
                     </tr>
                   </thead>
