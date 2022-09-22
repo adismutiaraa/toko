@@ -3,7 +3,7 @@ import Router from "next/router";
 
 export default function MyPage() {
   return (
-    <Layout title="Items" module="Warehouse" menu="Items">
+    <Layout title="Item" module="Warehouse" menu="Item">
       <section className="content">
         <div className="card">
           <div className="card-body p-2">
