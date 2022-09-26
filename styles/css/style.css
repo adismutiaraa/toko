@@ -1,3 +1,36 @@
 .th-action1 {
     width: 50px;
 }
+
+.th-code{
+    width: 100px;
+}
+
+.th-date{
+    width: 100px;
+}
+
+.th-total{
+    width: 100px;
+    color: blue;
+}
+
+.th2-code{
+    width: 170px;
+}
+
+.th2-price{
+    width: 150px;
+}
+
+.th2-qty{
+    width: 70px;
+}
+
+.th2-total{
+    width: 160px;
+}
+
+.th2-plus{
+    width: 50px;
+}

@@ -10,16 +10,20 @@ export default function Nav() {
           </li>
           <li className="nav-item">
             <div className="nav-link ">
-              <a href="">
-                <i className="fa fa-power-off"></i>
-              </a>
+              <Link href="/logout">
+                <a>
+                  <i className="fa fa-power-off"></i>
+                </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link">
-              <a href="" className="text-white">
-                <i className="fa fa-home"></i>
-              </a>
+              <Link href="/user/home">
+                <a className="text-white">
+                  <i className="fa fa-home"></i>
+                </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item dropdown">
@@ -59,6 +63,7 @@ export default function Nav() {
             <div className="dropdown-menu">
               <div className="text-bold pl-2">Purchase</div>
               <div className="dropdown-divider"></div>
+
               <Link href="/purchase/supplier">
                 <a className="dropdown-item small">Supplier</a>
               </Link>
@@ -68,11 +73,16 @@ export default function Nav() {
               <Link href="/purchase/item">
                 <a className="dropdown-item small">Item</a>
               </Link>
+              <div className="dropdown-divider"></div>
+
+              <Link href="/purchase/purchase">
+                <a className="dropdown-item small">Purchase</a>
+              </Link>
             </div>
           </li>
           <li className="nav-item dropdown">
             <a title="Warehouse" className="nav-link" data-toggle="dropdown">
-              <i className="fa fa-atom"></i>
+              <i className="fas fa-warehouse"></i>
             </a>
             <div className="dropdown-menu">
               <div className="text-bold pl-2">Warehouse</div>

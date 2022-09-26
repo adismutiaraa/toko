@@ -35,15 +35,17 @@ export default function MyPage() {
                 <table className="table table-bordered table-sm small mt-2">
                   <thead className="bg-gray">
                     <tr>
-                      <th width="300">Name</th>
-                      <th width="100">City</th>
-                      <th width="300">Address</th>
+                      <th>Code</th>
+                      <th>Name</th>
+                      <th>City</th>
+                      <th>Address</th>
                       <th width="100">Phone</th>
                       <th width="100">&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <td>S-001</td>
                       <td>AA</td>
                       <td>Cirebon</td>
                       <td>Jalan Dr.Cipto Mangunkusumo No.1A</td>
