@@ -74,9 +74,11 @@ export default function Nav() {
                 <a className="dropdown-item small">Item</a>
               </Link>
               <div className="dropdown-divider"></div>
-
               <Link href="/purchase/purchase">
                 <a className="dropdown-item small">Purchase</a>
+              </Link>
+              <Link href="/purchase/itempurchase">
+                <a className="dropdown-item small">Item Purchase</a>
               </Link>
             </div>
           </li>
@@ -104,6 +106,10 @@ export default function Nav() {
               </Link>
               <Link href="/sales/item">
                 <a className="dropdown-item small">Item</a>
+              </Link>
+              <div className="dropdown-divider"></div>
+              <Link href="/sales/salepayment">
+                <a className="dropdown-item small">Sale Payment</a>
               </Link>
             </div>
           </li>
