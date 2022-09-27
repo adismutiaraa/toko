@@ -6,13 +6,20 @@
     width: 100px;
 }
 
+.th-price{
+    width: 100px;
+}
+
+.th-qty{
+    width:50px;
+}
+
 .th-date{
     width: 100px;
 }
 
 .th-total{
     width: 100px;
-    color: blue;
 }
 
 .th2-code{
@@ -38,3 +45,4 @@
 .th2-disc {
     width: 70px;
 }
+

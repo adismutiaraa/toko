@@ -1,8 +1,9 @@
 import Layout from "../../../components/layout/user";
+import Router from "next/router";
 
 export default function MyPage() {
   return (
-    <Layout title="Item" module="Sales" menu="Item">
+    <Layout title="Purchase" module="Purchase" menu="Purchase">
       <section className="content">
         <div className="card">
           <div className="card-body p-2">
@@ -24,20 +25,35 @@ export default function MyPage() {
               <table className="table table-bordered table-sm small mt-2">
                 <thead className="bg-gray">
                   <tr>
-                    <th width="100">Code</th>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th className="th-price">Price</th>
-                    <th className="th-qty">Qty</th>
+                    <th width="75">&nbsp;</th>
+                    <th className="th-code">Code</th>
+                    <th className="th-date">Date</th>
+                    <th className="th-date">Due Date</th>
+                    <th>Supplier</th>
+                    <th className="th-total">Total</th>
+                    <th className="th-total">Payment</th>
+                    <th className="th-total">Balance</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td className="text-center">
+                      <button
+                        onClick={(e) => {
+                          Router.push("/finance/purchasepayment/add");
+                        }}
+                        className="btn btn-xs bg-olive pl-2 pr-2"
+                      >
+                        <i className="fa-sharp fas fa-dollar-sign"></i>
+                      </button>
+                    </td>
                     <td>F001</td>
-                    <td>Food</td>
-                    <td>Indomie Goreng Original</td>
-                    <td className="text-right">24,500</td>
+                    <td>12-02-2022</td>
+                    <td>12-02-2022</td>
+                    <td>Supplier 1</td>
+                    <td className="text-right">245,000</td>
                     <td className="text-right">0</td>
+                    <td className="text-right">245,000</td>
                   </tr>
                   <tr>
                     <td colSpan="100" className="pt-3">

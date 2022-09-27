@@ -77,8 +77,8 @@ export default function Nav() {
               <Link href="/purchase/purchase">
                 <a className="dropdown-item small">Purchase</a>
               </Link>
-              <Link href="/purchase/itempurchase">
-                <a className="dropdown-item small">Item Purchase</a>
+              <Link href="/purchase/purchasedetail">
+                <a className="dropdown-item small">Purchase Detail</a>
               </Link>
             </div>
           </li>
@@ -108,8 +108,29 @@ export default function Nav() {
                 <a className="dropdown-item small">Item</a>
               </Link>
               <div className="dropdown-divider"></div>
-              <Link href="/sales/salepayment">
-                <a className="dropdown-item small">Sale Payment</a>
+              <Link href="/sales/sale">
+                <a className="dropdown-item small">Sale</a>
+              </Link>
+              <Link href="/sales/saledetail">
+                <a className="dropdown-item small">Sale Detail</a>
+              </Link>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a title="Sales" className="nav-link" data-toggle="dropdown">
+              <i className="fas fa-calculator"></i>
+            </a>
+            <div className="dropdown-menu">
+              <div className="text-bold pl-2">Finance</div>
+              <div className="dropdown-divider"></div>
+              <Link href="/finance/purchase">
+                <a className="dropdown-item small">Purchase</a>
+              </Link>
+              <Link href="/finance/purchasepayment">
+                <a className="dropdown-item small">Purchase Payment</a>
+              </Link>
+              <Link href="/finance/purchasepaymentdetail">
+                <a className="dropdown-item small">Purchase Payment Detail</a>
               </Link>
             </div>
           </li>

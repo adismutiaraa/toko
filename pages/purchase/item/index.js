@@ -37,7 +37,8 @@ export default function MyPage() {
                     <th width="100">Code</th>
                     <th>Category</th>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th className="th-price">Price</th>
+                    <th className="th-qty">Qty</th>
                     <th width="75">&nbsp;</th>
                   </tr>
                 </thead>
@@ -46,8 +47,9 @@ export default function MyPage() {
                     <td>F001</td>
                     <td>Food</td>
                     <td>Indomie Goreng Original</td>
-                    <td>24500</td>
-                    
+                    <td className="text-right">24,500</td>
+                    <td className="text-right">0</td>
+
                     <td>
                       <button
                         onClick={(e) => {

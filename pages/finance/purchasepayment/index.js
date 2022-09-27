@@ -1,8 +1,9 @@
 import Layout from "../../../components/layout/user";
+import Router from "next/router";
 
 export default function MyPage() {
   return (
-    <Layout title="Item" module="Sales" menu="Item">
+    <Layout title="Purchase Payment" module="Finance" menu="Purchase Payment">
       <section className="content">
         <div className="card">
           <div className="card-body p-2">
@@ -24,20 +25,32 @@ export default function MyPage() {
               <table className="table table-bordered table-sm small mt-2">
                 <thead className="bg-gray">
                   <tr>
-                    <th width="100">Code</th>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th className="th-price">Price</th>
-                    <th className="th-qty">Qty</th>
+                    <th className="th-code">Code</th>
+                    <th className="th-date">Date</th>
+                    <th>Supplier</th>
+                    <th className="th-total">Total</th>
+                    <th width="75">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>F001</td>
-                    <td>Food</td>
-                    <td>Indomie Goreng Original</td>
-                    <td className="text-right">24,500</td>
-                    <td className="text-right">0</td>
+                    <td>12-02-2022</td>
+                    <td>Supplier 1</td>
+                    <td className="text-right">245,000</td>
+                    <td>
+                      <button
+                        onClick={(e) => {
+                          Router.push("/finance/purchasepayment/edit");
+                        }}
+                        className="btn btn-xs btn-warning pl-2 pr-2"
+                      >
+                        <i className="fa fa-pen fa-sm"></i>
+                      </button>
+                      <button className="btn btn-xs btn-danger ml-1 pl-2 pr-2">
+                        <i className="fa fa-trash fa-sm"></i>
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td colSpan="100" className="pt-3">

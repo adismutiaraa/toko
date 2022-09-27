@@ -222,6 +222,7 @@ export default function () {
                         </td>
                         <td>
                           <input
+                            disabled
                             type="text"
                             className="form-control form-control-sm text-right"
                             id="txt_subtotal"

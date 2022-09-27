@@ -3,7 +3,7 @@ import Router from "next/router";
 
 export default function MyPage() {
   return (
-    <Layout title="Item Purchase" module="Purchase" menu="Item Purchase">
+    <Layout title="Purchase Detail" module="Purchase" menu="Purchase Detail">
       <section className="content">
         <div className="card">
           <div className="card-body p-2">
@@ -30,8 +30,8 @@ export default function MyPage() {
                     <th>Supplier</th>
                     <th className="th-code">Item#</th>
                     <th>Item</th>
-                    <th className="th2-price">Price</th>
-                    <th className="th2-qty">Qty</th>
+                    <th className="th-price">Price</th>
+                    <th className="th-qty">Qty</th>
                     <th className="th-total">Subtotal</th>
                   </tr>
                 </thead>

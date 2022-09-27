@@ -4,7 +4,7 @@ import Router from "next/router";
 export default function () {
   return (
     <>
-      <Layout title="Sale Payment" module="Sales" menu="Sale Payment / Edit">
+      <Layout title="Sale" module="Sales" menu="Sale / Edit">
         <div className="modal fade" id="modalcustomer">
           <div className="modal-dialog modal-xl">
             <div className="modal-content">
@@ -87,7 +87,7 @@ export default function () {
               <div className="float-right">
                 <button
                   onClick={(e) => {
-                    Router.push("/sales/salepayment");
+                    Router.push("/sales/sale");
                   }}
                   className="btn btn-sm btn-warning"
                 >
@@ -207,6 +207,7 @@ export default function () {
                           </td>
                           <td>
                             <input
+                              disabled
                               type="text"
                               className="form-control form-control-sm text-right"
                               id="txt_price"
@@ -286,7 +287,14 @@ export default function () {
                           <td colspan="5" className="text-right">
                             Payment
                           </td>
-                          <td className="text-right bg-gray">0</td>
+                          <td>
+                            <input
+                              type="text"
+                              id="txt_payment"
+                              className="form-control form-control-sm"
+                              value="0"
+                            />
+                          </td>
                           <td></td>
                         </tr>
                         <tr className="bg-gray-light text-bold">
