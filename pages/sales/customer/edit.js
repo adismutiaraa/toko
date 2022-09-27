@@ -1,17 +1,17 @@
 import Layout from "../../../components/layout/user";
 import Router from "next/router";
 
-export default function MyPage() {
+export default function () {
   return (
     <>
-      <Layout title="Staff" module="Setup" menu="Staff / Edit">
+      <Layout title="Customer" module="Sales" menu="Customer / Edit">
         <section className="content">
           <div className="card">
             <div className="card-body p-3">
               <div className="float-right">
                 <button
                   onClick={(e) => {
-                    Router.push("/setup/staff");
+                    Router.push("/sales/customer");
                   }}
                   className="btn btn-sm btn-warning"
                 >
@@ -19,15 +19,6 @@ export default function MyPage() {
                 </button>
               </div>
               <form className="small mt-3">
-                <div className="form-group">
-                  <label>Code</label>
-                  <input
-                    type="text"
-                    className="form-control form-control-sm"
-                    id="txt_code"
-                    placeholder="Code"
-                  />
-                </div>
                 <div className="form-group">
                   <label>Name</label>
                   <input
@@ -37,17 +28,16 @@ export default function MyPage() {
                     placeholder="Name"
                   />
                 </div>
-
                 <div className="form-group">
                   <label>Address</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
                     id="txt_address"
-                    placeholder="Adress"
+                    placeholder="Address"
                   />
                 </div>
-                <div className="form-group mt-3">
+                <div className="form-group">
                   <label>City</label>
                   <input
                     type="text"
@@ -65,28 +55,9 @@ export default function MyPage() {
                     placeholder="Phone"
                   />
                 </div>
-                <div className="form-group">
-                  <label>Date</label>
-                  <input
-                    type="date"
-                    className="form-control datetimepicker-input"
-                    data-target="#reservationdate"
-                  />
 
-                  <div className="form-group mt-3">
-                    <label>Position</label>
-                    <select
-                      className="form-control form-control-sm"
-                      id="txt_position_id"
-                    >
-                      <option>&nbsp;</option>
-                      <option>Admin</option>
-                      <option>Kasir</option>
-                    </select>
-                  </div>
-                </div>
                 <button type="submit" className="btn btn-danger btn-sm">
-                  Save
+                  Add
                 </button>
               </form>
             </div>

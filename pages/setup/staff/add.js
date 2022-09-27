@@ -67,26 +67,11 @@ export default function MyPage() {
                 </div>
                 <div className="form-group">
                   <label>Date</label>
-                  <div
-                    className="input-group date input-group-sm"
-                    id="reservationdate"
-                    data-target-input="nearest"
-                  >
-                    <input
-                      type="text"
-                      className="form-control datetimepicker-input"
-                      data-target="#reservationdate"
-                    />
-                    <div
-                      className="input-group-append"
-                      data-target="#reservationdate"
-                      data-toggle="datetimepicker"
-                    >
-                      <div className="input-group-text">
-                        <i className="fa fa-calendar"></i>
-                      </div>
-                    </div>
-                  </div>
+                  <input
+                    type="date"
+                    className="form-control datetimepicker-input col-4"
+                    data-target="#reservationdate"
+                  />
                   <div className="form-group">
                     <label>Position</label>
                     <select
