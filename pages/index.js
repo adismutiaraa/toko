@@ -32,12 +32,14 @@ export default function MyPage() {
     setMsg(_username);
 
     await axios
-      .post(_Lang._DOMAIN + "/pget")
+      .post(_Lang._DOMAIN + "/pget", { username: _username })
       .then((_JSON) => {
+        alert(_JSON.data.s);
+
         //cek _JSON status
         setTimeout(function () {
           //proses login
-          setMsg("");
+          setMsg("Sukses");
 
           Router.push("/login");
         }, _Lang._TIMER);
