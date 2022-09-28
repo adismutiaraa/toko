@@ -118,7 +118,7 @@ export default function Nav() {
           </li>
           <li className="nav-item dropdown">
             <a title="Finance" className="nav-link" data-toggle="dropdown">
-              <i className="fa fa-sack-dollar"></i>
+              <i className="fa fa-money-bill"></i>
             </a>
             <div className="dropdown-menu">
               <div className="text-bold pl-2">Finance</div>
