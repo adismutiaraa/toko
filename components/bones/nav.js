@@ -117,7 +117,7 @@ export default function Nav() {
             </div>
           </li>
           <li className="nav-item dropdown">
-            <a title="Sales" className="nav-link" data-toggle="dropdown">
+            <a title="Finance" className="nav-link" data-toggle="dropdown">
               <i className="fas fa-calculator"></i>
             </a>
             <div className="dropdown-menu">
