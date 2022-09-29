@@ -1,5 +1,6 @@
 import Layout from "../../../components/layout/user";
 import Router from "next/router";
+import { useState} from "react";
 
 export default function () {
   const [_name, setName] = useState("");
