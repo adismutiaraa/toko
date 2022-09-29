@@ -2,6 +2,11 @@ import Layout from "../../../components/layout/user";
 import Router from "next/router";
 
 export default function () {
+  const [_name, setName] = useState("");
+  const [_city, setCity] = useState("");
+  const [_address, setAddress] = useState("");
+  const [_phone, setPhone] = useState("");
+
   return (
     <>
       <Layout title="Customer" module="Sales" menu="Customer / Add">

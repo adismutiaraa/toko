@@ -2,9 +2,11 @@ import Layout from "../../../components/layout/user";
 import Router from "next/router";
 import { useState, useEffect } from "react";
 import _LANG from "../../../_lang_en.json";
+import axios from "axios";
 
 export default function MyPage() {
   const [_loading, setLoading] = useState(true);
+  const [_code, setCode] = useState("");
   const [_name, setName] = useState("");
   const [_city, setCity] = useState("");
   const [_address, setAddress] = useState("");
@@ -22,6 +24,25 @@ export default function MyPage() {
     e.preventDefault();
 
     setFrm(_name + "-" + _city + "-" + _address + "-" + _phone);
+    await axios
+      .post("http://localhost:3001/supplier_save", {
+        id: 100,
+        code: _code,
+        name: _name,
+        addres: _address,
+        city: _city,
+        phone: _phone,
+        s: "1",
+      })
+      .then((JSON) => {
+        if (JSON.data.s == 1) {
+          setFrm("Berhasil");
+          Router.push("/purchase/supplier");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   if (_loading) return <img src="/img/loading.gif" />;
@@ -46,6 +67,17 @@ export default function MyPage() {
                 </button>
               </div>
               <form className="small mt-3" onSubmit={(e) => formSubmit(e)}>
+                <div className="form-group">
+                  <label>{_LANG._CODE}</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_code"
+                    placeholder="Code"
+                    value={_code}
+                    onChange={(e) => setCode(e.target.value)}
+                  />
+                </div>
                 <div className="form-group">
                   <label>{_LANG._NAME}</label>
                   <input

@@ -1,10 +1,71 @@
 import Layout from "../../../components/layout/user";
 import Router from "next/router";
+import { useState, useEffect } from "react";
+import _LANG from "../../../_lang_en.json";
+import axios from "axios";
 
 export default function MyPage() {
+  const [_loading, setLoading] = useState(true);
+  const [_code, setCode] = useState("");
+  const [_name, setName] = useState("");
+  const [_city, setCity] = useState("");
+  const [_address, setAddress] = useState("");
+  const [_phone, setPhone] = useState("");
+  const [_frm, setFrm] = useState("");
+
+  useEffect(() => {
+    pageControll();
+  }, []);
+
+  const pageControll = async () => {
+    setLoading(false);
+
+    await axios
+      .get("http://localhost:3001/supplier")
+      .then((JSON) => {
+        setCode(JSON.data.code);
+        setName(JSON.data.name);
+        setCity(JSON.data.city);
+        setAddress(JSON.data.address);
+        setPhone(JSON.data.phone);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const formSubmit = async (e) => {
+    e.preventDefault();
+
+    setFrm(_name + "-" + _city + "-" + _address + "-" + _phone);
+    await axios
+      .post("http://localhost:3001/supplier_update", {
+        id: 100,
+        code: _code,
+        name: _name,
+        addres: _address,
+        city: _city,
+        phone: _phone,
+        s: "1",
+      })
+      .then((JSON) => {
+        if (JSON.data.s == 1) {
+          setFrm("Berhasil");
+          Router.push("/purchase/supplier");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  if (_loading) return <img src="/img/loading.gif" />;
   return (
     <>
-      <Layout title="Supplier" module="Purchase" menu="Supplier / Edit">
+      <Layout
+        title={_LANG._SUPPLIER}
+        module={_LANG._PURCHASE}
+        menu={_LANG._SUPPLIER + " / " + _LANG._EDIT}
+      >
         <section className="content">
           <div className="card">
             <div className="card-body p-3">
@@ -18,48 +79,68 @@ export default function MyPage() {
                   <i className="fa fa-arrow-left"></i>
                 </button>
               </div>
-              <form className="small mt-3">
+              <form className="small mt-3" onSubmit={(e) => formSubmit(e)}>
                 <div className="form-group">
-                  <label>Name</label>
+                  <label>{_LANG._CODE}</label>
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    id="txt_code"
+                    placeholder="Code"
+                    value={_code}
+                    onChange={(e) => setCode(e.target.value)}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>{_LANG._NAME}</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
                     id="txt_name"
                     placeholder="Name"
+                    value={_name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
-                  <label>City</label>
+                  <label>{_LANG._CITY}</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
                     id="txt_city"
                     placeholder="City"
+                    value={_city}
+                    onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
-                  <label>Address</label>
+                  <label>{_LANG._ADDRESS}</label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
                     id="txt_address"
                     placeholder="Address"
+                    value={_address}
+                    onChange={(e) => setAddress(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
-                  <label>Phone</label>
+                  <label>{_LANG._PHONE}</label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control form-control-sm"
                     id="txt_phone"
                     placeholder="Phone"
+                    value={_phone}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
 
                 <button type="submit" className="btn btn-danger btn-sm">
-                  Save
+                  {_LANG._SAVE}
                 </button>
               </form>
+              <div>{_frm}</div>
             </div>
           </div>
         </section>
